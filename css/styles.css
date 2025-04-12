@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Aileron-Local';
-    src: url(../fonts/Aileron-SemiBold.otf);
-    font-weight: bold;
+    src: url(../fonts/Aileron-Bold.otf);
 }
 @font-face {
-    font-family: 'Aileron-Local';
-    src: url(../fonts/Aileron-Regular.otf);
+    font-family: 'Aileron-Local-SemiB';
+    src: url(../fonts/Aileron-SemiBold.otf);
+    font-weight: bold;
 }
 @font-face {
     font-family: 'Aileron-Local';
@@ -63,6 +63,19 @@
     font-weight: normal;
     src: local('Nobile Bold Italic'), url('../fonts/Nobile-BoldItalic.woff') format('woff');
     }
+@keyframes slide-in {
+    from {
+        translate: 100% 0;
+        scale: 200% 1;
+        opacity: 0;
+    }
+      
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+        opacity: 1;
+    }
+}
 * {
     box-sizing: border-box;
 }
@@ -71,8 +84,10 @@ body {
     background: #b8d1bc;
 }
 body p{
-    font-family: 'Nobile Medium';
+    font-family: 'Nobile Regular';
     padding: 4px;
+    letter-spacing: 0.1em;
+    line-height: 1.2em;
 }
 img.background {
     position: fixed;
@@ -88,12 +103,12 @@ div.content-wrapper {
 div.top-nav {
     display: flex;
     column-gap: 2em;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 8px;
     background: #90d4ffd2; 
-    height: 15em;
+    height: 8.5em;
     width:100%;
     position: absolute;
     top:0;
@@ -103,7 +118,7 @@ div.nav-image{
 }
 div.nav-image img {
     float: left;
-    height: 200px;
+    height: 120px;
     width: auto;
     object-fit: contain;
 }
@@ -113,7 +128,7 @@ div.top-nav a{
     font-size: 2em;
     text-decoration: none;
     transition: 1s;
-    font-family: 'Aileron-Local';
+    font-family: 'Aileron-Local-SemiB';
     font-weight: bold;
 }
 div.top-nav a:hover{
@@ -125,25 +140,29 @@ div.top-nav a.active {
     color:black;
 }
 div.header {
-    margin-top: 15em;
+    margin-top: 34em;
     height: fit-content;
     overflow: hidden;
     background-position: center;
     background-size: cover;
-    padding-bottom: 20px;
-    background: rgba(0, 0, 0, 0.622);
+    padding-bottom: 10em;
+    
 }
 div.logo{
-    margin-top: 8em;
+    margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 8em;
     width: auto;
-    height: 100px;
     text-align: center;
-    align-content: start;
+    align-content: center;
     color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.622);
     
+}
+div.logo p{
+    font-size: 2em;
+    font-family: 'Nobile Medium';
 }
 div.logo h1{
     display: none;
@@ -160,13 +179,15 @@ div.slideshow-container{
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    padding: 8px;
-    /* background: #414141a4; */
+    padding: 12px;
     background: #ffffffb0;
     border-radius: 25px;
+    height: 500px;
 }
 div.slideshow-container button{
-    background: #25602a;
+    font-family: 'Aileron-Local-SemiB';
+    background: linear-gradient(to left, #25602a 50%, #90d4ff 50%) right;
+    background-size: 200% 100%;
     color: #ffffff;
     border-radius: 25px;
     border: 2px #ffffff solid;
@@ -174,25 +195,50 @@ div.slideshow-container button{
     height: 2.5em;
     font-size: 2em;
     padding: 6px;
+    transition: 1s ease;
+}
+div.slideshow-container button:hover {
+    cursor: pointer;
+    background-position: left;
+    color: black;
 }
 div.slideshow-container p{
     color: rgb(0, 0, 0);
-    margin-left: 8em;
-    margin-right: 8em;
+    margin-left: 2em;
+    margin-right: 2em;
     font-size: 1.6em;
+    transition: 2s;
 }
 .mySlides1 {
     display: none;
 }
+div.side-by-side {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+div.side-by-side picture {
+    align-self: center;
+}
+div.side-by-side picture img {
+    border-radius: 15px;
+    border: 2px black solid;
+    height: 200px;
+    align-items: center;
+}
+.slide-in {
+    animation-duration: 1.5s;
+    animation-name: slide-in;
+}
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    background: #92b095d2;
+    background-color: #547e58;
     top: 50%;
     width: auto;
     margin-top: 0px;
     padding: 16px;
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -209,26 +255,36 @@ div.slideshow-container p{
 }
 .prev:hover, .next:hover {
     background-color: #547e58;
-    color: black;
+    background: #92b095d2;
+    color: rgb(0, 0, 0);
 }
 div.section{
-    display: flex;
-    color: #ffffff;
-    height: fit-content;
-}
-div.section-cards {
-    display: flex;
-    column-count: 2;
-    column-gap: 1em;
-    column-width: auto;
-    flex-wrap: nowrap;
+    width: 100%;
     background: #92b095;
     background-image: url("../images/koru.webp");
     background-position: bottom 0px right 0px;
     background-size:contain;
     background-repeat: no-repeat;
     color: #ffffff;
-    height: 800px;
+    height: fit-content;
+}
+
+.section-picture-view {
+    height: 100vh;
+    background: transparent;
+}
+div.section-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.5em;
+    column-gap: 1em;
+    background: #92b095;
+    background-image: url("../images/koru.webp");
+    background-position: bottom 0px right 0px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    height: fit-content;
     padding: 30px;
 }
 
@@ -240,13 +296,30 @@ div.flex-container {
     text-align: center;
     padding: 10px;
 }
-div.flex-container h2 {
+div.flex-container-2{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+h2.videos {
     font-size: 1.2em;
     font-family: 'Aileron-Local';
     font-weight: bold;
+    text-decoration: underline;
+}
+h2.home-page {
+    color: black;
+    text-decoration: none;
+    font-size: 2em;
+    text-decoration: none;
 }
 div.flex-container p{
     font-family: 'Nobile Regular';
+    color: black;
+}
+div.flex-container h3 {
+    color: black;
+    font-weight: bold;
+    font-family: 'Aileron-Local';
 }
 .one{
     width: 40%;
@@ -260,4 +333,22 @@ div.no-background {
 .wide{
     width: 100%;
     height: 600px;
+}
+div.white-line {
+    height: 2px;
+    width: 90%;
+    margin: auto;
+    background: white;
+}
+div.footer{
+    padding: 2em;
+    background: #414141;
+    width: 100%;
+    text-align: center;
+}
+div.footer p {
+    margin-bottom: 0;
+    color: white;
+    font-family: 'Nobile Medium';
+
 }
