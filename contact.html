@@ -1,0 +1,164 @@
+<!Doctype html>
+<html lang="en>">
+    <head>
+        <title>Contact Us</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body onload="enableCreateUser()">
+        <div class="content-wrapper">
+          <div class="hero-image taitua">
+            <div class="top-nav">
+                <div class="nav-image">
+                        <div>
+                            <a href="index.html" class="nav-link">
+                            <img src="images/Logo400.webp" alt="Virtual Tours Waikato Logo">
+                            </a>
+                         </div>
+                        <div>
+                            <a href="index.html" class="nav-link">
+                    <img src="images/Waikato_Text.webp" alt="Virtual Tours Waikato" class="nav-text">
+                </a>
+                   </div>
+                </div>
+                <a href="index.html" id="top-of-page">Home</a>
+                <a href="about.html">About</a>
+                <a href="videos.html">Virtual Tours</a>
+                <a href="contact.html" class="active">Contact Us</a>
+            </div>
+            <div class="logo">
+                <h1 class="show">Contact Us</h1>
+                <h2>Get in touch with us and share your own videos here!</h2>
+              </div>
+              <div class="cta-button">
+                </div>
+            </div>
+            <div class="section">
+                <div class="flex-container wide">
+                    <h2 class="home-page">Like and Subscribe here!</h2>
+                    <a href="https://www.facebook.com/profile.php?id=61576291499178" target="_blank">
+                    <svg width="54" height="54" viewBox="0 0 24 24" transform="" id="injected-svg">
+                                        Boxicons v3.0 https://boxicons.com | License https://docs.boxicons.com/free
+                      <path d="M12 2.06c-5.5 0-10 4.5-10 10 0 4.94 3.61 9.06 8.33 9.89l.06-.05h-.06v-7.06h-2.5v-2.78h2.5V9.84c0-2.5 1.61-3.89 3.89-3.89.72 0 1.5.11 2.22.22v2.56h-1.28c-1.22 0-1.5.61-1.5 1.39v1.94h2.67l-.44 2.78h-2.22v7.06h-.06l.06.05c4.72-.83 8.33-4.94 8.33-9.89 0-5.5-4.5-10-10-10"/>
+                    </svg> <br>
+                    </a>
+                    <a href="https://www.youtube.com/@VirtualToursWaikato" target="_blank">
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="54" height="54"  
+                                      fill="red" viewBox="0 0 24 24" >
+                      <path d="M21.593 7.203a2.5 2.5 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.52 2.52 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831M9.996 15.005l.005-6 5.207 3.005z"></path>
+                    </svg>
+                    </a>
+                    <h3>Email</h3>
+                    <a mailto="virtualtourswaikato@gmail.com" class="para-a">virtualtourswaikato@gmail.com</a>
+                    <br>
+                    <h2 class="home-page">Send us a message</h2>
+                    <p class="home-page">Use this form to get in touch with us today!
+                    </p>
+                    <p>To submit your own video to be featured on the site, please check the box and submit a video link.</p>
+                    <p><b>Please note:</b> You will be directed to another page when you submit your form.<p> <p>Once you confirm that you are not a bot, you will be redirected back to this page.</p>
+                    <div class="form-container clearfix">
+                        <form action="https://formsubmit.co/d03a9aa4112c01f9bf7836fb237952c0" name="videoform" id="videoform" onsubmit="return validateForm()" method="POST">
+                            <div class="row">
+                                <div class="col-50">
+                                  <label for="firstname">First Name</label>
+                                </div>
+                                <div class="col-50">
+                                  
+                                  <label for="lastname">Last Name</label>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-50">
+                                    <input type="text" id="firstname" name="firstname" placeholder="Your name..">
+                                </div>
+                                <div class="col-50">
+                                  <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+                                </div>
+                              </div>
+                              <div class="row">
+                          <div class="col-50">
+                            <label for="email">Email</label>
+                          </div>
+                          <div class="col-50">
+                            <label for="number">Phone Number (Optional)</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-50">
+                            <input type="text" id="email" name="email" placeholder="email">
+                          </div>
+                          <div class="col-50">
+                            <input type="text" id="number" name="number" placeholder="Phone #">
+                          </div>
+                        </div>
+                              <div class="row"> <!-- Checkbox code -->
+                                <div class="col-25">
+                                    <input type="checkbox" id="videocheck" name="videocheck" value="Tick" onclick="enableCreateUser()">
+                                </div>
+                                <div class="col-75-v">
+                                  <label for="videocheck">Check this box if you want to submit a video.</label>
+                                </div>
+                                
+                              </div>
+                              <div class="row-textarea" id="video-link">
+                                <div class="col-100">
+                                  <label for="traildesc">Trail Description</label>
+                                </div>
+                                <div class="col-75 ta">
+                                  <textarea id="traildesc" name="traildesc" placeholder="Write a short description about your trail (optional)..."></textarea>
+                                </div>
+                                <div class="col-100">
+                                  <label for="link">Youtube URL</label>
+                                </div>
+                                <div class="col-75">
+                                  <input type="text" id="link" name="link" placeholder="Enter your youtube video URL">
+                                </div>
+                        </div>
+                        <div class="row-textarea">
+                          <div class="col-100">
+                            <label for="message">Your Message</label>
+                          </div>
+                          <div class="col-75 ta">
+                            <textarea id="message" name="message" placeholder="Enter your message here (optional)..."></textarea>
+                          </div>
+                        </div>
+                        <div class="row-textarea">
+                            <div class="col-100">
+                              <input type="submit" name="submit" class="submit-button">
+                            </div>
+                        </div>
+                        <p id="error" style="color: red;"></p>
+                      </form>
+                      
+                  </div>
+                <div class="flex-container-2"></div>
+            </div>
+          </div>
+          <button id="button-top-of-page" onclick="goTop()">Go to Top</button>
+        <div class="footer" id="footer-grid">
+            <div class="white-line">
+            </div>
+            <p>Virtual Tours Waikato 2025 All Rights Reserved.</p>
+            <div class="icons">
+              <a href="https://www.facebook.com/profile.php?id=61576291499178" target="_blank">
+              <svg width="54" height="54" viewBox="0 0 24 24" transform="" id="injected-svg">
+                                          Boxicons v3.0 https://boxicons.com | License https://docs.boxicons.com/free
+                        <path d="M12 2.06c-5.5 0-10 4.5-10 10 0 4.94 3.61 9.06 8.33 9.89l.06-.05h-.06v-7.06h-2.5v-2.78h2.5V9.84c0-2.5 1.61-3.89 3.89-3.89.72 0 1.5.11 2.22.22v2.56h-1.28c-1.22 0-1.5.61-1.5 1.39v1.94h2.67l-.44 2.78h-2.22v7.06h-.06l.06.05c4.72-.83 8.33-4.94 8.33-9.89 0-5.5-4.5-10-10-10"/>
+                      </svg>
+                    </a>
+                <a href="https://www.youtube.com/@VirtualToursWaikato" target="_blank">
+              <svg  xmlns="http://www.w3.org/2000/svg" width="54" height="54"  fill="red" viewBox="0 0 24 24" id="two">
+                <path d="M21.593 7.203a2.5 2.5 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.52 2.52 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831M9.996 15.005l.005-6 5.207 3.005z"></path>
+              </svg>
+              </a>
+            </div>
+            </div>
+        </div>
+        <script src="javascript/imagescript.js"></script>
+        <script src="javascript/formvalidate.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script src="javascript/scrollListener.js"></script>
+    </body>
+</html>

@@ -7,67 +7,98 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <img src="images/Ham_Lake_1.webp" class="background">
         <div class="content-wrapper">
-            
-            <div class="top-nav">
-                <div class="nav-image">
-                    <img src="images/Logo400.webp" alt="Virtual Tours Waikato Logo">
-                    <img src="images/Waikato_TextB.png" alt="Virtual Tours Waikato">
+            <div class="hero-image taitua">
+                <div class="top-nav">
+                    <div class="nav-image">
+                        <div>
+                            <a href="index.html" class="nav-link">
+                            <img src="images/Logo400.webp" alt="Virtual Tours Waikato Logo">
+                            </a>
+                         </div>
+                        <div>
+                            <a href="index.html" class="nav-link">
+                    <img src="images/Waikato_Text.webp" alt="Virtual Tours Waikato" class="nav-text">
+                </a>
+                   </div>
                 </div>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="videos.html" class="active">Trail Videos</a>
-                <a href="contact.html">Contact Us</a>
+                    <a href="index.html" id="top-of-page">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="videos.html" class="active">Virtual Tours</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="logo">
+                    <h1 class="hide">Virtual Tours</h1>
+                    <h2>Check out our walking videos below!</h2>
+                    <p style="font-size: 1em;">Click on a video title to access more information about the trail.</p>
+                </div>
+                <div class="cta-button">
+                </div>
             </div>
-            <div class="header">
-                    <div class="logo">
-                        <h1>Walking Videos Directory</h1>
-                        <h2>Check out our walking videos below!</h2>
-                        <p style="font-size: 1em;">Click on a video title to access more information about the trail.</p>
+            <div class="background-wrapper">
+                <div class="search-wrapper">
+                    <label for="search-bar">Search Trails</label>
+                    <input type="search" id="search-bar"> 
+                </div>
+                <div id="no-results" style="display:none; text-align:center; margin: 20px 0; font-weight: bold;">
+                <p>No results found.</p>
+                </div>
+                <div class="section-cards text">
+                    <div class="flex-container three no-background">
+                        <h2>Kaniwhaniwha Cave Walk</h2>
+                         <img src="images/Kani_Thumbnail.webp" alt="Pirongia Forest Park Thumbnail">
+                        <h3>About</h3>
+                        <p>A great short walk in Pirongia Forest Park, just 30 minutes south of Hamilton.</p>
+                        <a href=walkOne.html class="a-button">Click here to see video...</a>
                     </div>
-            </div>
-            <div class="section-cards text">
-                <div class="flex-container three no-background">
-                    <h2 class="videos link"><a href=walkOne.html>Kaniwhaniwha Cave Walk</a></h2>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Gx48ieoB7_0?si=S-WtvIYRSiI9zPl1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h3>About</h3>
-                    <p>Experience the beauty of some of Waikato’s best scenery from the comfort of your own home. Stream our HD videos to enhance your home workout or just enjoy the incredible views. </p>
-                    <h3>Weather</h3>
-                    <iframe id="widget-iframe" width="560px" height="200px"
- src="https://www.yr.no/en/content/2-6240720/table.html" allowtransparency="true" style="border:none"></iframe>
-                </div>
-                <div class="flex-container four no-background">
-                    <h2 class="videos">Kaniwhaniwha Kahikatea Tree Walk</h2>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CWHQrRTlXvQ?si=AcVnZcwRAbgIYSx1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h3>About</h3>
-                    <p>Find links for all the necessary information to explore your chosen walk in person! Stay safe with up-to-date weather forecasts, local trail maps, and other trail-specific information which can be found on the Trail Videos page.</p>
-                <h3>Weather</h3>
-                <iframe id="widget-iframe" width="560px" height="200px"
- src="https://www.yr.no/en/content/2-6240720/table.html" allowtransparency="true" style="border:none"></iframe>
-                </div>
-                <div class="flex-container four no-background">
-                    <h2 class="videos">Pakahakaha Walk</h2>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1mm7AN03ols?si=Ugg0sV1-GuYXLGyC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <p>Find links for all the necessary information to explore your chosen walk in person! Stay safe with up-to-date weather forecasts, local trail maps, and other trail-specific information which can be found on the Trail Videos page.</p>
-                    <h3>Weather</h3>
-                    <iframe id="widget-iframe" width="560px" height="200px"
- src="https://www.yr.no/en/content/2-6235414/table.html" allowtransparency="true" style="border:none"></iframe>
-                </div>
-                
-            </div>
-            <div class="section-picture-view">
-                <div class="flex-container wide">
-                    <h3 class="home-page">Text</h3>
-                    <p>Some text</p>
+                    <div class="flex-container four no-background">
+                        <h2>Kahikatea Tree Walk</h2>
+                        <img src="images/Kahikatea.webp" alt="Kahikatea Tree Pirongia Thumbnail">
+                        <h3>About</h3>
+                        <p>This is an extension of the Kaniwhaniwha Cave Walk in Pirongia Forest Park, and features great native forest scenery and birdlife.</p>
+                        <a href=walkTwo.html class="a-button">Click here to see video...</a>
+                    </div>
+                    <div class="flex-container four no-background">
+                        <h2>Pakahakaha Walk</h2>
+                         <img src="images/Thames_Thumbnail.webp" alt="Pakahakaha Bay Walk Thumbnail">
+                        <h3>About</h3>
+                        <p>A great short walk near Whangamata, Waikato. Featuring great views of the ocean.</p>
+                        <a href=walkThree.html class="a-button">Click here to see video...</a>
+                    </div>
+                    <div class="flex-container four no-background">
+                        <h2>Taitua Arboretum</h2>
+                        <img src="images/Share.webp" alt="Taitua Walk Thumbnail">
+                        <h3>About</h3>
+                        <p>A great short walk just 10 minutes outside of Hamilton City, with lakes, birdlife, wildlife and excellent picnic spots for the family.</p>
+                        <a href=walkFour.html class="a-button">Click here to see video...</a>
+                    </div>
+                    <br>
+                    <br>
+                    
                 </div>
             </div>
         </div>
-        <div class="footer">
+        <button id="button-top-of-page" onclick="goTop()">Go to Top</button>
+        <div class="footer" id="footer-grid">
             <div class="white-line">
             </div>
             <p>Virtual Tours Waikato 2025 All Rights Reserved.</p>
-        </div>
+            <div class="icons">
+              <a href="https://www.facebook.com/profile.php?id=61576291499178" target="_blank">
+              <svg width="54" height="54" viewBox="0 0 24 24" transform="" id="injected-svg">
+                                          Boxicons v3.0 https://boxicons.com | License https://docs.boxicons.com/free
+                        <path d="M12 2.06c-5.5 0-10 4.5-10 10 0 4.94 3.61 9.06 8.33 9.89l.06-.05h-.06v-7.06h-2.5v-2.78h2.5V9.84c0-2.5 1.61-3.89 3.89-3.89.72 0 1.5.11 2.22.22v2.56h-1.28c-1.22 0-1.5.61-1.5 1.39v1.94h2.67l-.44 2.78h-2.22v7.06h-.06l.06.05c4.72-.83 8.33-4.94 8.33-9.89 0-5.5-4.5-10-10-10"/>
+                      </svg>
+                    </a>
+                <a href="https://www.youtube.com/@VirtualToursWaikato" target="_blank">
+              <svg  xmlns="http://www.w3.org/2000/svg" width="54" height="54"  fill="red" viewBox="0 0 24 24" id="two">
+                <path d="M21.593 7.203a2.5 2.5 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.52 2.52 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831M9.996 15.005l.005-6 5.207 3.005z"></path>
+              </svg>
+              </a>
+            </div>
+            </div>
         <script src="javascript/imagescript.js"></script>
+        <script src="javascript/search.js"></script>
+        <script src="javascript/scrollListener.js"></script>
     </body>
 </html>
