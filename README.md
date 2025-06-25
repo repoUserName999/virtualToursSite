@@ -1,4 +1,4 @@
-These files are my group's Semester One project for COMP506, Interactive Digital Media.
+These files are the finished product of my group's Semester One project for COMP506, Interactive Digital Media. This involved pitching a virtual walk company and designing a website to host the company's video content.
 
 The hosted site can be found here: https://virtual-tours-website-fae96.web.app/
 
